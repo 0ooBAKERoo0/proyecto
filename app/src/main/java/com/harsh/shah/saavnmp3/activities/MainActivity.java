@@ -222,21 +222,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupBottomNavigation() {
-        bottomNav = binding.bottomNav;
-        bottomNav.setOnItemSelectedListener(item -> {
-            int itemId = item.getItemId();
-            if (itemId == R.id.nav_home) {
-                loadFragment(new HomeFragment());
-                return true;
-            } else if (itemId == R.id.nav_local) {
-                loadFragment(new LocalMusicFragment());
+        bottomNav = findViewById(R.id.bottom_nav);
+        bottomNav.setOnNavigationItemSelectedListener(item -> {
+            if (item.getItemId() == R.id.local) {
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragment_container, new LocalMusicFragment())
+                        .commit();
                 return true;
             }
+            // Agrega más casos para otros ítems del menú si es necesario
             return false;
         });
 
-        // Cargar fragmento inicial
-        loadFragment(new HomeFragment());
+        // Configurar el fragmento inicial
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fragment_container, new HomeFragment())
+                .commit();
     }
 
     private void loadFragment(Fragment fragment) {
@@ -298,11 +299,6 @@ public class MainActivity extends AppCompatActivity {
 
         slidingRootNavBuilder.getLayout().findViewById(R.id.library).setOnClickListener(view -> {
             startActivity(new Intent(MainActivity.this, SavedLibrariesActivity.class));
-            slidingRootNavBuilder.closeMenu();
-        });
-
-        slidingRootNavBuilder.getLayout().findViewById(R.id.about).setOnClickListener(view -> {
-            startActivity(new Intent(MainActivity.this, AboutActivity.class));
             slidingRootNavBuilder.closeMenu();
         });
     }
@@ -387,7 +383,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showData() {
-
         songs.clear();
         artists.clear();
         albums.clear();
@@ -538,7 +533,6 @@ public class MainActivity extends AppCompatActivity {
         binding.popularAlbumsRecyclerView.setAdapter(new ActivityMainAlbumItemAdapter(data_shimmer));
         binding.popularArtistsRecyclerView.setAdapter(new ActivityMainArtistsItemAdapter(artists_shimmer));
         binding.playlistRecyclerView.setAdapter(new ActivityMainPlaylistAdapter(data_shimmer));
-
     }
 
     void tryConnect() {

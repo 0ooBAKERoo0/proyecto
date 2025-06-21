@@ -1,13 +1,13 @@
 <resources>
-    <string name="app_name">Melotune</string>
-    <string name="app_license">MIT License\n\nCopyright (c) 2024 Harsh S Shah\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.</string>
+    <string name="app_name" translatable="false">MusicArch</string>
+    <string name="app_license" translatable="false">MIT License\n\nCopyright (c) 2024 Harsh S Shah\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.</string>
     <string name="menu_home">menu_home\n</string>
     <string name="menu_local">local\n</string>
-    <string name="previous">Anterior</string>
-    <string name="next">Siguiente</string>
-    <string name="play">Reproducir</string>
-    <string name="pause">Pausar</string>
-    <string name="music_channel_name">Reproducción musical</string>
-    <string name="music_channel_description">Controles de reproducción</string>
-    <string name="notification_previous">notificacionprevia\n</string>
+    <string name="previous" translatable="false">Anterior</string>
+    <string name="next" translatable="false">Siguiente</string>
+    <string name="play" translatable="false">Reproducir</string>
+    <string name="pause" translatable="false">Pausar</string>
+    <string name="music_channel_name" translatable="false">Reproducción musical</string>
+    <string name="music_channel_description" translatable="false">Controles de reproducción</string>
+    <string name="notification_previous" translatable="false">notificacionprevia\n</string>
 </resources>

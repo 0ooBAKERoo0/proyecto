@@ -53,7 +53,7 @@ android {
 
     applicationVariants.configureEach { variant ->
         variant.outputs.each { output ->
-            def outputFileName = "Melotune-${variant.versionName}-${variant.name}.apk"
+            def outputFileName = "MusicArch-${variant.versionName}-${variant.name}.apk"
             output.outputFileName = outputFileName
 
             variant.assembleProvider.get().doLast {
