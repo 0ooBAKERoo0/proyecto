@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="ic_pause">@drawable/ic_pause_icon</drawable>
+    <drawable name="ic_play">@drawable/ic_play_icon</drawable>
+    <drawable name="ic_music_note">@drawable/ic_music_note_icon</drawable>
+    <drawable name="ic_skip_previous">@drawable/ic_skip_previous_icon</drawable>
+    <drawable name="ic_skip_next">@drawable/ic_skip_next_icon</drawable>
+    <drawable name="default_album">@drawable/default_album_art</drawable>
+</resources>
